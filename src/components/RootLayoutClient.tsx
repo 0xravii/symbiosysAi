@@ -5,14 +5,14 @@ import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AIBackground from '@/components/AIBackground';
+import type { Inter } from 'next/font/google';
 
-export default function RootLayoutClient({
-  children,
-  inter
-}: {
+interface RootLayoutClientProps {
   children: React.ReactNode;
-  inter: any;
-}) {
+  inter: ReturnType<typeof Inter>;
+}
+
+export default function RootLayoutClient({ children, inter }: RootLayoutClientProps) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
