@@ -41,7 +41,7 @@ export default function Services() {
         >
           Our Services
         </motion.h1>
-        
+        {/* Service grid container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
