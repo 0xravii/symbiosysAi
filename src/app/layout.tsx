@@ -1,3 +1,5 @@
+
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import RootLayoutClient from '@/components/RootLayoutClient';
@@ -7,8 +9,8 @@ const inter = Inter({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Symbiosys AI',
+export const metadata: Metadata = {
+  title: 'Symbiosis AI',
   description: 'Transforming businesses through innovative AI solutions',
 };
 
@@ -19,9 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <RootLayoutClient inter={inter}>
-        {children}
-      </RootLayoutClient>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
+      <body className={inter.className}>
+        <RootLayoutClient inter={inter}>
+          {children}
+        </RootLayoutClient>
+      </body>
     </html>
   );
 }

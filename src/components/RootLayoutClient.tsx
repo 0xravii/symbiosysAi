@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'next-themes';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import AIBackground from '@/components/AIBackground';
+import ScrollToTop from '@/components/ScrollToTop';
 import type { Inter } from 'next/font/google';
 
 interface RootLayoutClientProps {
@@ -31,7 +31,7 @@ export default function RootLayoutClient({ children, inter }: RootLayoutClientPr
         <div className="flex flex-col min-h-screen relative z-10">
           <Navbar />
           <main className="flex-grow pt-16">{children}</main>
-          <Footer />
+          <ScrollToTop />
         </div>
       </ThemeProvider>
     </body>

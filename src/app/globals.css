@@ -25,10 +25,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -41,7 +59,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -72,6 +99,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -91,6 +122,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -120,10 +164,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -136,7 +198,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -167,6 +238,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -186,6 +261,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -215,10 +303,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -231,7 +337,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -262,6 +377,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -281,6 +400,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -310,10 +442,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -326,7 +476,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -357,6 +516,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -376,6 +539,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -405,10 +581,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -421,7 +615,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -452,6 +655,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -471,6 +678,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -500,10 +720,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -516,7 +754,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -547,6 +794,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -566,6 +817,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -595,10 +859,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -611,7 +893,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -642,6 +933,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -661,6 +956,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -690,10 +998,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -706,7 +1032,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -737,6 +1072,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -756,6 +1095,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -785,10 +1137,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -801,7 +1171,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -832,6 +1211,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -851,6 +1234,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -880,10 +1276,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -896,7 +1310,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -927,6 +1350,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -946,6 +1373,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -975,10 +1415,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -991,7 +1449,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1022,6 +1489,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1041,6 +1512,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1070,10 +1554,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1086,7 +1588,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1117,6 +1628,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1136,6 +1651,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1165,10 +1693,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1181,7 +1727,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1212,6 +1767,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1231,6 +1790,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1260,10 +1832,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1276,7 +1866,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1307,6 +1906,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1326,6 +1929,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1355,10 +1971,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1371,7 +2005,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1402,6 +2045,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1421,6 +2068,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1450,10 +2110,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1466,7 +2144,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1497,6 +2184,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1516,6 +2207,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1545,10 +2249,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1561,7 +2283,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1592,6 +2323,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1611,6 +2346,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1640,10 +2388,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1656,7 +2422,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1687,6 +2462,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1706,6 +2485,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1735,10 +2527,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1751,7 +2561,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1782,6 +2601,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1801,6 +2624,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1830,10 +2666,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1846,7 +2700,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1877,6 +2740,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1896,6 +2763,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -1925,10 +2805,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -1941,7 +2839,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -1972,6 +2879,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -1991,6 +2902,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -2020,10 +2944,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -2036,7 +2978,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -2067,6 +3018,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -2086,6 +3041,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -2115,10 +3083,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -2131,7 +3117,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -2162,6 +3157,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -2181,6 +3180,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -2210,10 +3222,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -2226,7 +3256,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -2257,6 +3296,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -2276,6 +3319,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -2305,10 +3361,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -2321,7 +3395,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -2352,6 +3435,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -2371,6 +3458,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";
@@ -2400,10 +3500,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
 /* Add keyframe animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes float-slow {
@@ -2416,7 +3534,16 @@ body {
   50% { transform: translateY(-15px); }
 }
 
-
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
 
 @keyframes typing {
   from { opacity: 0; }
@@ -2447,6 +3574,10 @@ body {
   animation-delay: 2s;
 }
 
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
 .animate-gradient {
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
@@ -2466,6 +3597,19 @@ body {
 
 .delay-200 {
   animation-delay: 0.2s;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @import "tailwindcss";

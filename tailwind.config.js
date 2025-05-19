@@ -7,49 +7,34 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        primary: {
+          // Vibrant purple for buttons and highlights
+          50: '#f5f3ff',
+          100: '#ede9fe',
+          200: '#ddd6fe',
+          300: '#c4b5fd',
+          400: '#a78bfa',
+          500: '#8b5cf6',
+          600: '#7c3aed', // Main purple accent color
+          700: '#6d28d9',
+          800: '#5b21b6',
+          900: '#4c1d95',
+          950: '#2e1065',
+        },
+        secondary: {
+          // Deep indigo/purple for backgrounds
+          DEFAULT: '#1a0b33', // Darker purple background
+          dark: '#0f051d',    // Very dark purple for sections
+        },
+        accent: {
+          // Bright purple for accents
+          DEFAULT: '#8b5cf6',
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'float-slow': 'float-slow 8s ease-in-out infinite',
-        'float-delay': 'float-delay 7s ease-in-out infinite',
-        'gradient': 'gradient 8s ease infinite',
-        'typing': 'typing 0.5s ease-in-out forwards',
-        'fade-in': 'fade-in 1s ease-out forwards',
-        'slide-up': 'slide-up 0.8s ease-out forwards',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'float-slow': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        'float-delay': {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-15px)' },
-        },
-        gradient: {
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
-        },
-        typing: {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
-        },
-        'fade-in': {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
-        },
-        'slide-up': {
-          from: { opacity: '0', transform: 'translateY(20px)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
-        },
+        'hero-gradient': 'linear-gradient(to right, #1a0b33, #2e1065)',
       },
     },
   },

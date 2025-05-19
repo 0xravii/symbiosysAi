@@ -1,13 +1,20 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useRef, useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+// import { motion } from 'framer-motion';
 
 export default function AIBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
-    if (!canvasRef.current) return;
+    if (!canvasRef.current || !mounted) return;
     
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
@@ -18,79 +25,94 @@ export default function AIBackground() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-    
+
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle settings
-    const particles: Array<{
+    // Node class
+    class Node {
       x: number;
       y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
+      vx: number;
+      vy: number;
+      radius: number;
       color: string;
-    }> = [];
 
-    const createParticles = () => {
-      const particleCount = Math.floor(window.innerWidth / 10);
-      
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          size: Math.random() * 2 + 0.5,
-          speedX: (Math.random() - 0.5) * 0.5,
-          speedY: (Math.random() - 0.5) * 0.5,
-          color: `rgba(${100 + Math.random() * 155}, ${180 + Math.random() * 75}, 255, ${0.2 + Math.random() * 0.3})`,
-        });
+      constructor(x: number, y: number, radius: number, color: string) {
+        this.x = x;
+        this.y = y;
+        this.vx = (Math.random() - 0.5) * 0.5;
+        this.vy = (Math.random() - 0.5) * 0.5;
+        this.radius = radius;
+        this.color = color;
       }
-    };
 
-    createParticles();
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
 
-    // Connection lines
-    const drawConnections = () => {
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.strokeStyle = `rgba(100, 180, 255, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 0.5;
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
+        // Bounce off edges
+        if (this.x < this.radius || this.x > canvas.width - this.radius) {
+          this.vx = -this.vx;
+        }
+        if (this.y < this.radius || this.y > canvas.height - this.radius) {
+          this.vy = -this.vy;
         }
       }
-    };
+
+      draw() {
+        if (!ctx) return;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    // Create nodes
+    const nodeCount = Math.min(Math.floor(window.innerWidth * window.innerHeight / 15000), 100);
+    const nodes: Node[] = [];
+    const isDark = theme === 'dark';
+    
+    const nodeColor = isDark ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.1)';
+    const lineColor = isDark ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.05)';
+
+    for (let i = 0; i < nodeCount; i++) {
+      const radius = Math.random() * 2 + 1;
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      nodes.push(new Node(x, y, radius, nodeColor));
+    }
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Update and draw particles
-      particles.forEach(particle => {
-        particle.x += particle.speedX;
-        particle.y += particle.speedY;
-        
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
-        
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.fill();
-      });
-      
-      drawConnections();
       requestAnimationFrame(animate);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw nodes
+      nodes.forEach(node => {
+        node.update();
+        node.draw();
+      });
+
+      // Draw connections
+      nodes.forEach((nodeA, i) => {
+        nodes.slice(i + 1).forEach(nodeB => {
+          const dx = nodeA.x - nodeB.x;
+          const dy = nodeA.y - nodeB.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const maxDistance = 150;
+
+          if (distance < maxDistance) {
+            ctx.beginPath();
+            ctx.moveTo(nodeA.x, nodeA.y);
+            ctx.lineTo(nodeB.x, nodeB.y);
+            ctx.strokeStyle = lineColor;
+            ctx.lineWidth = 1 - distance / maxDistance;
+            ctx.stroke();
+          }
+        });
+      });
     };
 
     animate();
@@ -98,15 +120,16 @@ export default function AIBackground() {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
+  }, [mounted, theme]);
 
   return (
-    <motion.canvas
-      ref={canvasRef}
-      className="fixed inset-0 w-full h-full -z-10 bg-gradient-to-br from-gray-900 via-blue-900 to-blue-950"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    />
+    <div className="fixed inset-0 z-0 overflow-hidden">
+      <canvas 
+        ref={canvasRef} 
+        className="absolute inset-0 w-full h-full transition-opacity duration-1000"
+        style={{ opacity: mounted ? 1 : 0 }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30 dark:to-gray-900/30" />
+    </div>
   );
 }
